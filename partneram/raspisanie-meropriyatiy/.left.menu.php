@@ -13,6 +13,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Раздел для проверки шаблона", 
+		"/partneram/raspisanie-meropriyatiy/razdel-dlya-proverki-shablona/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
