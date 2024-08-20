@@ -1,4 +1,8 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?><!DOCTYPE html>
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<? 
+	IncludeTemplateLangFile(__FILE__); 
+?>
+<!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID?>">
 
 <head>
@@ -10,14 +14,14 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?=$APPLICATION->ShowHead(); ?>
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH .'/css/reset.css'?>" />
-    <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH .'/css/style.css'?>" />
-    <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH .'/css/owl.carousel.css'?>" />
-    <script src="<?= SITE_TEMPLATE_PATH .'/js/jquery.min.js'?>"></script>
-    <script src="<?= SITE_TEMPLATE_PATH .'/js/owl.carousel.min.js'?>"></script>
-    <script src="<?= SITE_TEMPLATE_PATH .'/js/scripts.js'?>"></script>
-    <link rel="icon" type="image/vnd.microsoft.icon"  href="<?= SITE_TEMPLATE_PATH .'/img/favicon.ico'?>">
-    <link rel="shortcut icon" href="<?= SITE_TEMPLATE_PATH .'/img/favicon.ico'?>">
+	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/reset.css" />
+    <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/style.css" />
+    <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/owl.carousel.css" />
+    <script src="<?= SITE_TEMPLATE_PATH ?>/js/jquery.min.js"></script>
+    <script src="<?= SITE_TEMPLATE_PATH ?>/js/owl.carousel.min.js"></script>
+    <script src="<?= SITE_TEMPLATE_PATH ?>/js/scripts.js"></script>
+    <link rel="icon" type="image/vnd.microsoft.icon"  href="<?= SITE_TEMPLATE_PATH ?>/img/favicon.ico">
+    <link rel="shortcut icon" href="<?= SITE_TEMPLATE_PATH ?>/img/favicon.ico">
 </head>
 
 <body>
@@ -76,7 +80,7 @@
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
 		"DELAY" => "N",
-		"MAX_LEVEL" => "1",
+		"MAX_LEVEL" => "3",
 		"MENU_CACHE_GET_VARS" => array(
 		),
 		"MENU_CACHE_TIME" => "3600",
@@ -88,6 +92,13 @@
 	),
 	false
 );?>
+<? if ($APPLICATION->GetCurDir() != "/"): ?>
+	<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumb", Array(
+		
+		),
+		false
+	);?>
+<? endif; ?>
         <!-- page -->
         <div class="page">
             <!-- content box -->
@@ -95,7 +106,12 @@
                 <!-- content -->
                 <div class="content">
                     <div class="cnt">
-
+						<? if ($APPLICATION->GetCurDir() != "/"): ?>
+							<header>
+								<h1><?=$APPLICATION->ShowTitle()?></h1>
+							</header>
+							<hr>
+						<? else: ?>
 						<p>«Мебельная компания» осуществляет производство мебели на высококлассном оборудовании с применением минимальной доли ручного труда, что позволяет обеспечить высокое качество нашей продукции. Налажен производственный процесс как массового и индивидуального характера, что с одной стороны позволяет обеспечить постоянную номенклатуру изделий и индивидуальный подход – с другой.
 						</p>
                     
@@ -119,7 +135,7 @@
 		                                        <br>
 		                                        <div class="inner-block">
 		                                            <a href="" class="photo-block">
-		                                                <img src="<?= SITE_TEMPLATE_PATH .'/img/new01.jpg'?>" alt="">
+		                                                <img src="<?= SITE_TEMPLATE_PATH ?>/img/new01.jpg?>" alt="">
 		                                            </a>
 		                                            <div class="text"><a href="">Угловой диван "Титаник",  с большим выбором расцветок и фактур.</a>
 		                                            <a href="" class="btn-arr"></a>
@@ -135,7 +151,7 @@
 		                                        <br>
 		                                        <div class="inner-block">
 		                                            <a href="" class="photo-block">
-		                                                <img src="<?= SITE_TEMPLATE_PATH .'/img/new02.jpg'?>" alt="">
+		                                                <img src="<?= SITE_TEMPLATE_PATH ?>/img/new02.jpg" alt="">
 		                                            </a>
 		                                            <div class="text"><a href="">Угловой диван "Титаник",  с большим выбором расцветок и фактур.</a>
 		                                            <a href="" class="btn-arr"></a>
@@ -151,7 +167,7 @@
 		                                        <br>
 		                                        <div class="inner-block">
 		                                            <a href="" class="photo-block">
-		                                                <img src="<?= SITE_TEMPLATE_PATH .'/img/new03.jpg'?>" alt="">
+		                                                <img src="<?= SITE_TEMPLATE_PATH ?>/img/new03.jpg" alt="">
 		                                            </a>
 		                                            <div class="text"><a href="">Угловой диван "Титаник",  с большим выбором расцветок и фактур.</a>
 		                                            <a href="" class="btn-arr"></a>
@@ -247,7 +263,4 @@
 		                </div>
 		                <!-- /afisha box -->
                                 
-				                               
-                    </div>
-                </div>
-                <!-- /content -->
+				         <?endif;?>                      

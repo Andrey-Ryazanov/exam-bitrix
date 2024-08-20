@@ -11,28 +11,28 @@ $aMenuLinks = Array(
 		"Компания", 
 		"company/", 
 		Array(), 
-		Array(), 
+		Array("TEXT_SUBITEM"=>"Этот текст для пункта \"Компания\"", "ITEM_COLOR"=>"color-red"), 
 		"" 
 	),
 	Array(
 		"Новости", 
 		"news/", 
 		Array(), 
-		Array(), 
+		Array("TEXT_SUBITEM"=>"Этот текст для пункта \"Новости\""), 
 		"" 
 	),
 	Array(
 		"Каталог", 
 		"products/", 
 		Array(), 
-		Array(), 
+		Array("TEXT_SUBITEM"=>"Этот текст для пункта \"Каталог\""), 
 		"" 
 	),
 	Array(
 		"Фотогалерея", 
 		"/", 
 		Array(), 
-		Array(), 
+		Array("TEXT_SUBITEM"=>"Этот текст для пункта \"Фотогалерея\""), 
 		"" 
 	),
 	Array(
@@ -45,6 +45,13 @@ $aMenuLinks = Array(
 	Array(
 		"Контакты", 
 		"contacts/", 
+		Array(), 
+		Array("TEXT_SUBITEM"=>"Этот текст для пункта \"Контакты\""), 
+		"" 
+	),
+	Array(
+		"Отзывы", 
+		"/rew/", 
 		Array(), 
 		Array(), 
 		"" 

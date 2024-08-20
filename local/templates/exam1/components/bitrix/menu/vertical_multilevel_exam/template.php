@@ -16,19 +16,38 @@
 					<?if ($previousLevel && $arItem["DEPTH_LEVEL"] < $previousLevel):?>
 						<?=str_repeat("</ul></li>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
 					<?endif?>
-				
 					<?if ($arItem["IS_PARENT"]):?>
 				
 						<?if ($arItem["DEPTH_LEVEL"] == 1):?>
 							<li <?if (isset($arItem['PARAMS']['ICON'])):?> 
-							class = "<?=$arItem['PARAMS']['ICON']?>" <?endif;?>>
-							<a href="<?=$arItem["LINK"]?>">
-								<?=$arItem["TEXT"]?>>
+							class = "<?=$arItem['PARAMS']['ICON'];?>" <?endif;?>>
+							<a
+							<?if (isset($arItem['PARAMS']['ITEM_COLOR'])):?> 
+								class = "<?=$arItem['PARAMS']['ITEM_COLOR'];?>" 
+								<?endif;?>
+								href="<?=$arItem["LINK"]?>"
+							>
+								<?=$arItem["TEXT"]?>
 							</a>
 							<ul>
+							<?if (isset($arItem['PARAMS']['TEXT_SUBITEM'])):?>
+								<div class="menu-text">
+									<?=$arItem['PARAMS']['TEXT_SUBITEM'];?>
+								</div>
+							<?endif;?>
 						<?else:?>
+							<?if (isset($arItem['PARAMS']['TEXT_SUBITEM'])):?>
+								<div class="menu-text">
+									<?=$arItem['PARAMS']['TEXT_SUBITEM'];?>
+								</div>
+							<?endif;?>
 							<li>
-							<a href="<?=$arItem["LINK"]?>">
+							<a 
+								<?if (isset($arItem['PARAMS']['ITEM_COLOR'])):?> 
+									class = "<?=$arItem['PARAMS']['ITEM_COLOR'];?>" 
+								<?endif;?>
+								href="<?=$arItem["LINK"]?>"
+							>
 								<?=$arItem["TEXT"]?>
 							</a>
 							<ul>
@@ -39,16 +58,29 @@
 						<?if ($arItem["PERMISSION"] > "D"):?>
 				
 							<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-								<li <?if (isset($arItem['PARAMS']['ICON'])):?> 
-								class = "<?=$arItem['PARAMS']['ICON']?>" <?endif;?>>
-								<a href="<?=$arItem["LINK"]?>">
-								<?=$arItem["TEXT"]?>
-								</a>
+
+								<li 
+									<?if (isset($arItem['PARAMS']['ICON'])):?> 
+										class = "<?=$arItem['PARAMS']['ICON']?>" 
+									<?endif;?>
+									>
+									<a 
+										<?if (isset($arItem['PARAMS']['ITEM_COLOR'])):?> 
+											class = "<?=$arItem['PARAMS']['ITEM_COLOR'];?>" 
+										<?endif;?>
+										href="<?=$arItem["LINK"]?>">
+										<?=$arItem["TEXT"]?>
+									</a>
 								</li>
 							<?else:?>
 								<li>
-									<a href="<?=$arItem["LINK"]?>">
-									<?=$arItem["TEXT"]?></a>
+									<a 								
+										<?if (isset($arItem['PARAMS']['ITEM_COLOR'])):?> 
+											class = "<?=$arItem['PARAMS']['ITEM_COLOR'];?>" 
+										<?endif;?>
+										href="<?=$arItem["LINK"]?>">
+											<?=$arItem["TEXT"]?>
+										</a>
 								</li>
 							<?endif?>
 				
