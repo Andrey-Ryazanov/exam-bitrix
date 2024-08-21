@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Главная", 
-		"/", 
+		"/site_kk/", 
 		Array(), 
 		Array("ICON"=>"main-page"), 
 		"" 
@@ -37,7 +37,21 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Партнерам", 
-		"/site_kk/partneram/", 
+		"partneram/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Отзывы", 
+		"rew/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Поиск", 
+		"search/", 
 		Array(), 
 		Array(), 
 		"" 

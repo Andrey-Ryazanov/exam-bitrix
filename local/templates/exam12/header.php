@@ -104,6 +104,13 @@
 			false
 		);?>
         <!-- /nav -->
+		<? if ($APPLICATION->GetCurDir() != "/"): ?>
+			<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumb", Array(
+				
+				),
+				false
+			);?>
+		<? endif; ?>
         <!-- page -->
         <div class="page">
             <!-- content box -->
