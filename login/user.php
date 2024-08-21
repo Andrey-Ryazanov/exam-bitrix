@@ -11,13 +11,5 @@ $APPLICATION->SetTitle("Профиль пользователя");
 		"USER_PROPERTY" => array(),
 		"USER_PROPERTY_NAME" => ""
 	)
-);?><?$APPLICATION->IncludeComponent(
-	"bitrix:system.auth.form",
-	"",
-	Array(
-		"FORGOT_PASSWORD_URL" => "/login/?forgot_password=yes,",
-		"PROFILE_URL" => "/login/user.php",
-		"REGISTER_URL" => "/login/?register=yes",
-		"SHOW_ERRORS" => "N"
-	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
