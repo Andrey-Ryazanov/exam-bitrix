@@ -34,6 +34,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array("TEXT_SUBITEM"=>"Этот текст для пункта \"Вакансии\""), 
 		"" 
+	),
+	Array(
+		"Обратная связь", 
+		"/company/obratnaya-svyaz.php", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
