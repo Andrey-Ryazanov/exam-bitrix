@@ -88,7 +88,7 @@ $APPLICATION->SetTitle("Отзывы");
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
 		"COMPONENT_TEMPLATE" => "rews",
-		"SEF_FOLDER" => "/site_kk/rew/",
+		"SEF_FOLDER" => "/site_bs/rew/",
 		"TAGS_CLOUD_ELEMENTS" => "150",
 		"PERIOD_NEW_TAGS" => "",
 		"DISPLAY_AS_RATING" => "rating",
